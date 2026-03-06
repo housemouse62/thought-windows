@@ -107,6 +107,7 @@ export default function App() {
         sections={NAV_SECTIONS}
         active={activeSection}
         onChange={setActiveSection}
+        filterVisible={activeSection === "Work"}
       />
 
       <FilterNav
@@ -114,6 +115,7 @@ export default function App() {
         projects={PROJECTS}
         active={activeFilter}
         onChange={setActiveFilter}
+        visible={activeSection === "Work"}
       />
 
       <main id="main" className="main-bg">

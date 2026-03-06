@@ -1,11 +1,11 @@
-export default function FilterNav({ filters, projects, active, onChange }) {
+export default function FilterNav({ filters, projects, active, onChange, visible }) {
   function countForFilter(value) {
     if (value === 'all') return projects.length;
     return projects.filter((p) => p.category === value).length;
   }
 
   return (
-    <nav className="filter-nav" aria-label="Filter projects by type">
+    <nav className={`filter-nav${visible ? '' : ' filter-nav--hidden'}`} aria-label="Filter projects by type">
       <div className="filter-nav-inner">
         <span className="filter-label" aria-hidden="true">Show:</span>
         {filters.map((f) => (

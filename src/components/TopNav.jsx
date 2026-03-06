@@ -1,6 +1,6 @@
-export default function TopNav({ sections, active, onChange }) {
+export default function TopNav({ sections, active, onChange, filterVisible }) {
   return (
-    <nav className="top-nav" aria-label="Primary navigation">
+    <nav className={`top-nav${filterVisible ? ' top-nav--filter-visible' : ''}`} aria-label="Primary navigation">
       <div className="top-nav-inner">
         {sections.map((section) => (
           <a

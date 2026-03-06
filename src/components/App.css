@@ -237,6 +237,11 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: 0 3px 0 var(--ink);
+  transition: box-shadow 0.25s ease;
+}
+.top-nav--filter-visible {
+  box-shadow: 0 3px 0 transparent;
 }
 .top-nav-inner {
   max-width: var(--max);
@@ -278,6 +283,17 @@ img {
 .filter-nav {
   background: var(--filter-bg);
   border-bottom: 3px solid var(--ink);
+  max-height: 80px;
+  opacity: 1;
+  overflow: hidden;
+  transition:
+    max-height 0.25s ease,
+    opacity 0.2s ease;
+}
+.filter-nav--hidden {
+  max-height: 0;
+  opacity: 0;
+  border-bottom-width: 0;
 }
 .filter-nav-inner {
   max-width: var(--max);
