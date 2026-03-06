@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import "./index.css";
+import "../index.css";
 import App from "./App.jsx";
-import WorkMain from "./work/WorkMain.jsx";
-import Branding from "./work/branding.jsx";
-import Marketing from "./work/marketing.jsx";
-import WebDev from "./work/webdev.jsx";
+import WorkMain from "../work/WorkMain.jsx";
+import Branding from "../work/Branding.jsx";
+import Marketing from "../work/Marketing.jsx";
+import WebDev from "../work/WebDev.jsx";
 
 const router = createBrowserRouter([
   {
