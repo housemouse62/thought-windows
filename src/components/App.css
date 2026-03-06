@@ -1,81 +1,39 @@
 /* ─── Google Fonts ─── */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=Jost:wght@300;400;500;600&display=swap");
 
-/* ─── Design Tokens: Beach Day ─── 
+/* Darios Sock */
 :root {
-  --bg: #fdf8ec;
-  --surface: #fffef5;
-  --header-bg: #1a5870;
-  --nav-bg: #1e7890;
-  --filter-bg: #fffef5;
-  --accent: #1a7890;
-  --accent2: #f07830;
-  --ink: #0a2830;
-  --muted: #2a4850;
-  --tan: #80c8d8;
-  --rule: #d8eef5;
-  --footer-bg: #0a2030;
-  --header-txt: #fdf8ec;
-  --name-acc: #f8d060;
-  --nav-txt: rgba(253, 248, 236, 0.75);
-  --nav-act: #0a2830;
-  --nav-act-bg: #f07830;
-  --stripe-a: #48b8c8;
-  --stripe-b: #f07830;
-  --stripe-def: #f07830;
-  --stripe-web: #48b8c8;
-  --stripe-design: #f07830;
-  --stripe-ops: #38a070;
-  --ct-def: #1a7890;
-  --ct-web: #1898a8;
-  --ct-design: #d06020;
-  --ct-ops: #208058;
-  --link: #1a6880;
-  --tag-bg: #fdf8ec;
-  --tag-bdr: #a0d8e8;
-  --dot: #f07830;
-
-  --serif: "Playfair Display", Georgia, serif;
-  --mono: "DM Mono", monospace;
-  --sans: "Jost", system-ui, sans-serif;
-  --max: 1140px;
-}*/
-
-/* ─── Design Tokens: Yours + Solid Amber Nav ─── */
-
-:root {
-  --bg: #ffe7bd;
-  --surface: #fff5e0;
-  --header-bg: #0c5679;
-  --nav-bg: #f5b35a;
-  --filter-bg: #fff5e0;
-  --accent: #3f8a8c;
-  --accent2: #f28a0f;
-  --ink: #0b0835;
-  --muted: #1a3050;
-  --tan: #7abcd0;
-  --rule: #f0cfa0;
-  --footer-bg: #081828;
-  --header-txt: #ffe7bd;
-  --name-acc: #f28a0f;
-  --nav-txt: rgba(11, 8, 53, 0.75);
-  --nav-hov-bg: #cbc9de;
-  --nav-act: #ffe7bd;
-  --nav-act-bg: #3f8a8c;
-  --stripe-a: #0c5679;
-  --stripe-b: #3f8a8c;
-  --stripe-def: #f28a0f;
-  --stripe-web: #3f8a8c;
-  --stripe-design: #f28a0f;
-  --stripe-ops: #0c5679;
-  --ct-def: #3f8a8c;
-  --ct-web: #2a7880;
-  --ct-design: #c07000;
-  --ct-ops: #0c5679;
-  --link: #2a6878;
-  --tag-bg: #ffe7bd;
-  --tag-bdr: #d4b070;
-  --dot: #f28a0f;
+  --bg: #f5f2ec;
+  --surface: #ffffff;
+  --header-bg: #1a2248;
+  --nav-bg: #c8a820;
+  --filter-bg: #ffffff;
+  --accent: #c8a820;
+  --accent2: #e8728a;
+  --ink: #1a2248;
+  --muted: #3a4868;
+  --tan: #d8c050;
+  --rule: #e0ddd8;
+  --footer-bg: #0f1530;
+  --header-txt: #f5f2ec;
+  --name-acc: #c8a820;
+  --nav-txt: rgba(26, 34, 72, 0.8);
+  --nav-act: #1a2248;
+  --nav-act-bg: #e8728a;
+  --stripe-a: #c8a820;
+  --stripe-b: #5ab8cc;
+  --stripe-def: #e8728a;
+  --stripe-web: #5ab8cc;
+  --stripe-design: #e8728a;
+  --stripe-ops: #2a8878;
+  --ct-def: #c8a820;
+  --ct-web: #3a98aa;
+  --ct-design: #c05068;
+  --ct-ops: #2a8878;
+  --link: #a88810;
+  --tag-bg: #f5f2ec;
+  --tag-bdr: #d8c870;
+  --dot: #e8728a;
 
   --serif: "Cormorant Garamond", Georgia, serif;
   --mono: "DM Mono", monospace;
@@ -91,6 +49,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -138,19 +97,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.site-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-    circle,
-    var(--accent2) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
-  opacity: 0.06;
-  pointer-events: none;
-}
+
 .header-inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -249,6 +196,7 @@ img {
   padding: 0 2rem;
   display: flex;
 }
+
 .top-nav a {
   display: inline-block;
   padding: 0.7rem 1.2rem;
@@ -264,14 +212,15 @@ img {
 }
 
 .top-nav a:hover {
-  color: var(--nav-hov-bg);
+  color: var(--nav-act);
   background: var(--nav-act-bg);
 }
 
 .top-nav a.active {
-  color: var(--nav-act);
+  color: var(--bg);
   background: var(--nav-act-bg);
 }
+
 .top-nav a:focus-visible {
   outline: 2px solid var(--accent2);
   outline-offset: -2px;

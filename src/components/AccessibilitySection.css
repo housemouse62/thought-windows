@@ -1,0 +1,49 @@
+.a11y-prose {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.a11y-prose p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.a11y-prose a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.a11y-prose a:hover {
+  color: var(--accent2);
+}
+
+.a11y-cert {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.a11y-cert-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.a11y-cert p {
+  margin: 0;
+}
+
+.a11y-close {
+  border-left: 3px solid var(--accent2);
+  padding-left: 1.25rem;
+  color: var(--ink) !important;
+  font-weight: 500;
+}

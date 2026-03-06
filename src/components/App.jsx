@@ -4,6 +4,8 @@ import TopNav from "./TopNav";
 import FilterNav from "./FilterNav";
 import ProjectsGrid from "./ProjectsGrid";
 import CVSection from "./CVSection";
+import AboutSection from "./AboutSection";
+import AccessibilitySection from "./AccessibilitySection";
 import Footer from "./Footer";
 import "./App.css";
 
@@ -140,6 +142,8 @@ export default function App() {
             </>
           )}
           {activeSection === "CV" && <CVSection />}
+          {activeSection === "About" && <AboutSection />}
+          {activeSection === "Accessibility" && <AccessibilitySection />}
         </div>
       </main>
 
