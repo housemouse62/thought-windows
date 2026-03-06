@@ -53,7 +53,7 @@ export default function CVSection() {
 
         <div className="cv-main">
           <a href="/ryan-skeels-cv.pdf" download className="cv-download">
-            Download PDF
+            ↓ Download PDF
           </a>
           <section aria-labelledby="summary-heading">
             <h3 id="summary-heading" className="visually-hidden">
