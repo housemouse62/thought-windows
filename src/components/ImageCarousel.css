@@ -1,0 +1,107 @@
+.photo {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+  transition-delay: 0.1s;
+  pointer-events: none;
+}
+
+.photo[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  bottom: 1%;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.carousel-button.next {
+  right: 1rem;
+  transform: translateX(10px);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+  transform: translateX(-10px);
+}
+
+.carousel:hover .carousel-button,
+.carousel-button:focus {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus:not(:focus-visible) {
+  outline: none;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 600px;
+}
+
+.carousel-slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.navdots {
+  position: absolute;
+  z-index: 2;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navdot {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 5px 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.navdot:hover {
+  transform: scale(1.2);
+}
+
+.navdot[data-active] {
+  background-color: black;
+  border-color: white;
+}

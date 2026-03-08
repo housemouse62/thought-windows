@@ -29,7 +29,7 @@ const PROJECTS = [
     description:
       "A writing tool for composing and organizing poetry. Structure and UI taking shape.",
     stack: ["React", "JavaScript"],
-    demoUrl: null,
+    demoUrl: "https://makepoetry.netlify.app/haiku",
     githubUrl: "https://github.com/housemouse62/poetry-app",
   },
   {
