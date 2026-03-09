@@ -62,7 +62,12 @@ export default function Modal({ title, content, onClose }) {
                   {activeSubProject === project.id && (
                     <div>
                       <p className="project-objective">{project.objective}</p>
-                      {<ImageCarousel photos={project.images} />}
+                      {
+                        <ImageCarousel
+                          photos={project.images}
+                          project={project.title}
+                        />
+                      }
                       <button onClick={() => setActiveSubProject(false)}>
                         close project
                       </button>

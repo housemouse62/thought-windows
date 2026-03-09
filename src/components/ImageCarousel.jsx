@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./ImageCarousel.css";
 
-export default function ImageCarousel({ photos }) {
+export default function ImageCarousel({ photos, project }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef(null);
 
@@ -28,7 +28,10 @@ export default function ImageCarousel({ photos }) {
   // }, []);
 
   return (
-    <section aria-label="Photography Portfolio">
+    <section
+      className="carousel-div"
+      aria-label={`${project.title} Image Portfolio`}
+    >
       <div
         className="carousel"
         onMouseEnter={() => clearInterval(intervalRef.current)}

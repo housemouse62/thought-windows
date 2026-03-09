@@ -9,8 +9,6 @@ import AboutSection from "./AboutSection";
 import AccessibilitySection from "./AccessibilitySection";
 import Footer from "./Footer";
 import PROJECTS from "../data/projects";
-import photo1 from "../assets/images/CanArt/amparo.jpg";
-import photo2 from "../assets/images/CanArt/billion-dollar-baby.jpg";
 
 import "./App.css";
 

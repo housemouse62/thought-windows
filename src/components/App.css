@@ -505,9 +505,9 @@ img {
 .modal {
   background: var(--surface);
   border: 2px solid var(--ink);
-  max-width: 680px;
+  max-width: 900px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 92vh;
   display: flex;
   flex-direction: column;
   box-shadow: 8px 8px 0 var(--ink);
