@@ -11,10 +11,12 @@ export default function ProjectsGrid({ projects }) {
 
   return (
     <div className="projects-grid" role="list">
-      {projects.map((project) => (
-        <div key={project.id} role="listitem">
-          <ProjectCard project={project} />
-        </div>
+      {projects.map((project, i) => (
+        <>
+          <div key={project.id} role="listitem">
+            <ProjectCard project={project} />
+          </div>
+        </>
       ))}
     </div>
   );

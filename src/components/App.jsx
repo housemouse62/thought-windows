@@ -3,10 +3,14 @@ import Header from "./Header";
 import TopNav from "./TopNav";
 import FilterNav from "./FilterNav";
 import ProjectsGrid from "./ProjectsGrid";
+import ImageCarousel from "./ImageCarousel";
 import CVSection from "./CVSection";
 import AboutSection from "./AboutSection";
 import AccessibilitySection from "./AccessibilitySection";
 import Footer from "./Footer";
+import photo1 from "../assets/images/CanArt/amparo.jpg";
+import photo2 from "../assets/images/CanArt/billion-dollar-baby.jpg";
+
 import "./App.css";
 
 const PROJECTS = [
@@ -43,8 +47,15 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     modalContent: {
-      images: [], // TODO: add image paths
       narrative: `Co-founded Baere Brewing Company in Denver in 2013. Over eleven years, managed all aspects of operations including staff hiring and management, financial oversight, regulatory compliance (TTB, state, local), vendor relationships, logistics, and marketing. Grew the brewery from a small taproom to an established Denver institution before closing in 2024.`,
+      projects: [
+        {
+          id: "can-art",
+          title: "Can Label Art & Design",
+          objective: "Create can labels art in house",
+          images: [photo1, photo2],
+        },
+      ],
     },
   },
   {

@@ -13,36 +13,42 @@ export default function ImageCarousel({ photos }) {
     setActiveIndex((prev) => (prev + offset + photos.length) % photos.length);
   }
 
-  function startAutoplay() {
-    intervalRef.current = setInterval(() => moveSlide(1), 4000);
-  }
+  // function startAutoplay() {
+  //   intervalRef.current = setInterval(() => moveSlide(1), 4000);
+  // }
 
-  function resetAutoplay() {
-    clearInterval(intervalRef.current);
-    startAutoplay();
-  }
+  // function resetAutoplay() {
+  //   clearInterval(intervalRef.current);
+  //   startAutoplay();
+  // }
 
-  useEffect(() => {
-    startAutoplay();
-    return () => clearInterval(intervalRef.current);
-  }, []);
+  // useEffect(() => {
+  //   startAutoplay();
+  //   return () => clearInterval(intervalRef.current);
+  // }, []);
 
   return (
     <section aria-label="Photography Portfolio">
       <div
         className="carousel"
         onMouseEnter={() => clearInterval(intervalRef.current)}
-        onMouseLeave={() => startAutoplay()}
+        // onMouseLeave={() => startAutoplay()}
       >
         <button
           className="carousel-button prev"
-          onClick={() => { moveSlide(-1); resetAutoplay(); }}
+          onClick={() => {
+            moveSlide(-1);
+            // resetAutoplay();
+          }}
         >
           &#10232;
         </button>
         <button
           className="carousel-button next"
-          onClick={() => { moveSlide(1); resetAutoplay(); }}
+          onClick={() => {
+            moveSlide(1);
+            // resetAutoplay();
+          }}
         >
           &#10233;
         </button>
@@ -65,7 +71,10 @@ export default function ImageCarousel({ photos }) {
               key={index}
               className="navdot"
               {...(index === activeIndex ? { "data-active": "" } : {})}
-              onClick={() => { goToSlide(index); resetAutoplay(); }}
+              onClick={() => {
+                goToSlide(index);
+                // resetAutoplay();
+              }}
             />
           ))}
         </div>
