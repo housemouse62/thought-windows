@@ -1,5 +1,12 @@
-import photo1 from "../assets/images/CanArt/amparo.jpg";
-import photo2 from "../assets/images/CanArt/billion-dollar-baby.jpg";
+//Baere Brewing Imports
+import can_art_1 from "../assets/images/CanArt/amparo.jpg";
+import can_art_2 from "../assets/images/CanArt/billion-dollar-baby.jpg";
+
+//Diggable Design imports
+import banner_mock from "../assets/images/diggable/banner-mock.jpg";
+import final_banner from "../assets/images/diggable/final-banner.jpg";
+import flyer_pro from "../assets/images/diggable/flyer-pro.jpg";
+import flyer_residential from "../assets/images/diggable/flyer-residential.jpg";
 
 const PROJECTS = [
   {
@@ -41,7 +48,7 @@ const PROJECTS = [
           id: "can-art",
           title: "Can Label Art & Design",
           objective: "Create can labels art in house",
-          images: [photo1, photo2],
+          images: [can_art_1, can_art_2],
         },
       ],
     },
@@ -57,8 +64,15 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     modalContent: {
-      images: [], // TODO: add image paths
       narrative: "",
+      projects: [
+        {
+          id: "icon-library",
+          title: "Icon Library",
+          objective: "Create an icon library",
+          images: [],
+        },
+      ],
     },
   },
   {
@@ -72,8 +86,15 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     modalContent: {
-      images: [], // TODO: add image paths
       narrative: "",
+      projects: [
+        {
+          id: "marketing",
+          title: "Business Marketing",
+          objective: "Create marketing materials",
+          images: [flyer_pro, flyer_residential, banner_mock, final_banner],
+        },
+      ],
     },
   },
 ];

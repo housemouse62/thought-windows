@@ -1,8 +1,9 @@
 .photo {
-  height: 600px;
-  width: 600px;
+  height: 100%;
+  width: 100%;
   position: absolute;
   inset: 0;
+  object-fit: contain;
   opacity: 0;
   transition: 0.3s opacity ease-in-out;
   transition-delay: 0.1s;
@@ -62,8 +63,9 @@
 
 .carousel {
   position: relative;
-  height: 600px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4/3;
 }
 
 .carousel-slides {
