@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import "./ImageCarousel.css";
 
 export default function ImageCarousel({ photos, project }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const intervalRef = useRef(null);
 
   function goToSlide(index) {
     setActiveIndex(index);
@@ -30,32 +29,9 @@ export default function ImageCarousel({ photos, project }) {
   return (
     <section
       className="carousel-div"
-      aria-label={`${project.title} Image Portfolio`}
+      aria-label={`${project} image carousel`}
     >
-      <div
-        className="carousel"
-        onMouseEnter={() => clearInterval(intervalRef.current)}
-        // onMouseLeave={() => startAutoplay()}
-      >
-        <button
-          className="carousel-button prev"
-          onClick={() => {
-            moveSlide(-1);
-            // resetAutoplay();
-          }}
-        >
-          &#10232;
-        </button>
-        <button
-          className="carousel-button next"
-          onClick={() => {
-            moveSlide(1);
-            // resetAutoplay();
-          }}
-        >
-          &#10233;
-        </button>
-
+      <div className="carousel">
         <div className="carousel-slides">
           {photos.map((photo, index) => (
             <img
@@ -63,24 +39,42 @@ export default function ImageCarousel({ photos, project }) {
               src={photo}
               className="photo"
               {...(index === activeIndex ? { "data-active": "" } : {})}
-              alt={`Slide ${index + 1}`}
+              alt={`${project} — image ${index + 1} of ${photos.length}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="carousel-controls">
+        <button
+          className="carousel-button"
+          onClick={() => moveSlide(-1)}
+          aria-label="Previous image"
+        >
+          ← prev
+        </button>
+
+        <div className="navdots" role="tablist" aria-label="Image navigation">
+          {photos.map((_, index) => (
+            <button
+              key={index}
+              role="tab"
+              className="navdot"
+              {...(index === activeIndex ? { "data-active": "" } : {})}
+              onClick={() => goToSlide(index)}
+              aria-label={`Image ${index + 1}`}
+              aria-selected={index === activeIndex}
             />
           ))}
         </div>
 
-        <div className="navdots">
-          {photos.map((_, index) => (
-            <div
-              key={index}
-              className="navdot"
-              {...(index === activeIndex ? { "data-active": "" } : {})}
-              onClick={() => {
-                goToSlide(index);
-                // resetAutoplay();
-              }}
-            />
-          ))}
-        </div>
+        <button
+          className="carousel-button"
+          onClick={() => moveSlide(1)}
+          aria-label="Next image"
+        >
+          next →
+        </button>
       </div>
     </section>
   );

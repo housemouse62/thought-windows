@@ -3,7 +3,6 @@ import Header from "./Header";
 import TopNav from "./TopNav";
 import FilterNav from "./FilterNav";
 import ProjectsGrid from "./ProjectsGrid";
-import ImageCarousel from "./ImageCarousel";
 import CVSection from "./CVSection";
 import AboutSection from "./AboutSection";
 import AccessibilitySection from "./AccessibilitySection";

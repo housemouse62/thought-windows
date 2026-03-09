@@ -571,6 +571,73 @@ img {
   padding: 2rem 0;
 }
 
+/* Project Information — closed by default, transitions to open */
+.project-information {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project-information--open {
+  max-height: 800px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .project-information {
+    transition: none;
+  }
+}
+
+.modal-projects {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 20px;
+}
+
+.modal-project-button.project-active {
+  background-color: var(--ink);
+  color: var(--surface);
+}
+
+.modal-project-button.project-active:hover {
+  background-color: var(--muted);
+  color: var(--surface);
+}
+
+.project-close,
+.modal-project-button {
+  margin-top: 1rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: none;
+  border: 1px solid var(--ink);
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  color: var(--ink);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.project-close:hover,
+.modal-project-button:hover {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.project-close:focus-visible .modal-project-button:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 3px;
+}
 /* ══════════════════════════════
    EMPTY STATE
 ══════════════════════════════ */

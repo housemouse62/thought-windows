@@ -86,13 +86,24 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     modalContent: {
-      narrative: "",
+      narrative:
+        "Diggable Designs Landscape and Gardening is a small business based in Lakewood, Colorado.",
       projects: [
         {
-          id: "marketing",
-          title: "Business Marketing",
-          objective: "Create marketing materials",
-          images: [flyer_pro, flyer_residential, banner_mock, final_banner],
+          id: "banner",
+          title: "Convention Banner",
+          objective: [
+            "Create a retractable banner for use at conventions and events. It should serve two purposes: to attract potential future customers as well as potential future employees",
+          ],
+          images: [banner_mock, final_banner],
+        },
+        {
+          id: "flyers",
+          title: "Convention Flyers",
+          objective: [
+            "Create two similarly designed flyers, one to attract potential future customers and one to attract potential future professional partners.",
+          ],
+          images: [flyer_pro, flyer_residential],
         },
       ],
     },

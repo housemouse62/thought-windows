@@ -3,7 +3,9 @@ import ImageCarousel from "./ImageCarousel";
 
 export default function Modal({ title, content, onClose }) {
   const closeRef = useRef(null);
-  const [activeSubProject, setActiveSubProject] = useState(null);
+  const [activeSubProject, setActiveSubProject] = useState(
+    content.projects?.[0]?.id ?? null
+  );
 
   // Focus the close button on open, restore focus on close
   useEffect(() => {
@@ -50,32 +52,45 @@ export default function Modal({ title, content, onClose }) {
           )}
 
           {content.projects && content.projects.length > 0 && (
-            <div className="modal-projects">
-              {content.projects.map((project) => (
-                <div key={project.id}>
-                  <div
-                    onClick={() => setActiveSubProject(project.id)}
-                    className="modal-project"
+            <>
+              {/* All project title buttons rendered together */}
+              <div className="modal-projects">
+                {content.projects.map((project) => (
+                  <button
+                    key={project.id}
+                    className={`modal-project-button ${activeSubProject === project.id ? "project-active" : ""}`}
+                    onClick={() =>
+                      setActiveSubProject(
+                        activeSubProject === project.id ? null : project.id,
+                      )
+                    }
+                    aria-expanded={activeSubProject === project.id}
+                    aria-controls={`project-detail-${project.id}`}
                   >
                     {project.title}
+                  </button>
+                ))}
+              </div>
+
+              {/* Detail panels — always in the DOM so CSS transitions work on open and close */}
+              {content.projects.map((project) => {
+                const isOpen = activeSubProject === project.id;
+                return (
+                  <div
+                    key={project.id}
+                    id={`project-detail-${project.id}`}
+                    className={`project-information${isOpen ? " project-information--open" : ""}`}
+                    aria-hidden={!isOpen}
+                  >
+                    <p className="project-objective">{project.objective}</p>
+                    <ImageCarousel
+                      photos={project.images}
+                      project={project.title}
+                    />
                   </div>
-                  {activeSubProject === project.id && (
-                    <div>
-                      <p className="project-objective">{project.objective}</p>
-                      {
-                        <ImageCarousel
-                          photos={project.images}
-                          project={project.title}
-                        />
-                      }
-                      <button onClick={() => setActiveSubProject(false)}>
-                        close project
-                      </button>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                );
+              })}
+            </>
           )}
 
           {!content.narrative &&
