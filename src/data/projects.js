@@ -1,6 +1,21 @@
 //Baere Brewing Imports
-import can_art_1 from "../assets/images/CanArt/amparo.jpg";
-import can_art_2 from "../assets/images/CanArt/billion-dollar-baby.jpg";
+import bottle_art_1 from "../assets/images/CanArt/amparo.jpg";
+import bottle_art_2 from "../assets/images/CanArt/breathe-in.jpg";
+import bottle_art_3 from "../assets/images/CanArt/breathe-out.jpg";
+import can_art_8 from "../assets/images/CanArt/billion-dollar-baby.jpg";
+import can_art_1 from "../assets/images/CanArt/wai-iti-gose.jpg";
+import can_art_2 from "../assets/images/CanArt/citrus-zested-gose.jpg";
+import can_art_4 from "../assets/images/CanArt/from-alanis.jpg";
+import can_art_5 from "../assets/images/CanArt/black-ryeday.jpg";
+import can_art_6 from "../assets/images/CanArt/3can.jpg";
+import can_art_7 from "../assets/images/CanArt/mahalo-vibes.jpg";
+import can_art_9 from "../assets/images/CanArt/not-forgotten.jpg";
+import can_art_3 from "../assets/images/CanArt/no-line.jpg";
+import can_art_10 from "../assets/images/CanArt/7-beers-8-years.jpg";
+
+import local_package_1 from "../assets/images/Local Package/package1.jpg";
+import local_package_2 from "../assets/images/Local Package/package2.jpeg";
+import local_package_3 from "../assets/images/Local Package/package3.jpeg";
 
 //Diggable Design imports
 import banner_mock from "../assets/images/diggable/banner-mock.jpg";
@@ -28,7 +43,7 @@ const PROJECTS = [
     description:
       "A writing tool for composing and organizing poetry. Structure and UI taking shape.",
     stack: ["React", "JavaScript"],
-    demoUrl: "https://makepoetry.netlify.app/haiku",
+    demoUrl: "https://makepoetry.netlify.app/",
     githubUrl: "https://github.com/housemouse62/poetry-app",
   },
   {
@@ -46,9 +61,31 @@ const PROJECTS = [
       projects: [
         {
           id: "can-art",
-          title: "Can Label Art & Design",
-          objective: "Create can labels art in house",
-          images: [can_art_1, can_art_2],
+          title: "Package Art & Design",
+          objective:
+            "Create bottle and can label art in house utilizing Adobe Illustrator & Photoshop, Procreate,  Canva and personal photography.",
+          images: [
+            can_art_1,
+            can_art_2,
+            can_art_3,
+            can_art_4,
+            can_art_5,
+            can_art_6,
+            can_art_7,
+            can_art_8,
+            can_art_9,
+            can_art_10,
+            bottle_art_1,
+            bottle_art_2,
+            bottle_art_3,
+          ],
+        },
+        {
+          id: "local-package",
+          title: "Local Business Support",
+          objective:
+            "Build and support connections with local small businesses. Collaborate on seasonal packages for distribution through website and in the taproom.",
+          images: [local_package_1, local_package_2, local_package_3],
         },
       ],
     },

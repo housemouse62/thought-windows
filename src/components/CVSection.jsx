@@ -39,7 +39,10 @@ export default function CVSection() {
             <h4>Technical Systems</h4>
             <ul>
               <li>Web Accessibility Testing (DHS Trusted Tester)</li>
-              <li>Web Development (HTML, CSS, JavaScript, React)</li>
+              <li>Web Development (HTML, CSS, JavaScript, React, SQL)</li>
+              <li>
+                Database Management: Relational Database Design & Querying{" "}
+              </li>
               <li>Digital & Visual Communication</li>
             </ul>
 
@@ -60,14 +63,15 @@ export default function CVSection() {
               Professional Summary
             </h3>
             <p className="summary">
-              Operations Leader & Systems Builder with 15+ years of experience
-              across small business leadership, public service, and education.
-              Proven expertise in managing $500K+ budgets, navigating
-              high-stakes regulatory environments, and implementing resilient
-              organizational systems. Currently leveraging a background in
-              public health enforcement and business ownership to provide
-              practical systems thinking, technical implementation, and steady
-              execution for mission-driven organizations.
+              I'm an operations leader & systems builder with 15+ years of
+              experience across small business leadership, public service, and
+              education. I have proven expertise in managing $500K+ budgets,
+              navigating high-stakes regulatory environments, and implementing
+              responsive and resilient organizational systems. I'm currently
+              seeking to leverage a background in creative solutions, business
+              ownership and management and and operational oversight to provide
+              practical systems thinking, technical implementation, and
+              continuous improvement for people-first organizations.
             </p>
           </section>
 
@@ -336,8 +340,8 @@ export default function CVSection() {
             </article>
             <article>
               <h4>
-                Full Stack Javascript Course
-                <span className="tech-locaiton">, Online</span>
+                The Odin Project: Full Stack Javascript Course
+                <span className="tech-location">, Online</span>
               </h4>
               <p className="tech-meta">
                 <span>Self-led Web Development Curriculum</span>

@@ -110,7 +110,8 @@ h3::after {
   font-style: italic;
 }
 
-.edu-location {
+.edu-location,
+.tech-location {
   font-weight: normal;
 }
 
