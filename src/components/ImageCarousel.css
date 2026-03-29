@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   max-width: 800px;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
 }
 
 .carousel-slides {
@@ -19,11 +19,13 @@
 }
 
 .photo {
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  border: 1px solid black;
   position: absolute;
-  inset: 0;
-  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   transition-delay: 0.1s;

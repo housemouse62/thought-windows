@@ -3,9 +3,7 @@ import ImageCarousel from "./ImageCarousel";
 
 export default function Modal({ title, content, onClose }) {
   const closeRef = useRef(null);
-  const [activeSubProject, setActiveSubProject] = useState(
-    content.projects?.[0]?.id ?? null
-  );
+  const [activeSubProject, setActiveSubProject] = useState(null);
 
   // Focus the close button on open, restore focus on close
   useEffect(() => {
@@ -47,7 +45,7 @@ export default function Modal({ title, content, onClose }) {
         </div>
 
         <div className="modal-body">
-          {content.narrative && (
+          {content.narrative && !activeSubProject && (
             <p className="modal-narrative">{content.narrative}</p>
           )}
 

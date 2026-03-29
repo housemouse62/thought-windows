@@ -544,7 +544,7 @@ img {
   outline-offset: 3px;
 }
 .modal-body {
-  padding: 1.5rem;
+  padding: 1rem;
   overflow-y: auto;
 }
 .modal-narrative {
@@ -562,6 +562,15 @@ img {
   width: 100%;
   border: 1px solid var(--rule);
 }
+.project-objective {
+  max-width: 800px;
+  margin: 1.25rem auto 0;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .modal-placeholder {
   font-family: var(--mono);
   font-size: 0.8rem;

@@ -17,6 +17,17 @@ import local_package_1 from "../assets/images/Local Package/package1.jpg";
 import local_package_2 from "../assets/images/Local Package/package2.jpeg";
 import local_package_3 from "../assets/images/Local Package/package3.jpeg";
 
+import anni1 from "../assets/images/Anniversary 8/8anni1.jpg";
+import anni2 from "../assets/images/Anniversary 8/8anni2.jpg";
+import anni3 from "../assets/images/Anniversary 8/8anni3.jpg";
+import anni4 from "../assets/images/Anniversary 8/8anni4.jpg";
+
+import social1 from "../assets/images/Social Post/Baereliner Weisse Ramp.jpeg";
+import social2 from "../assets/images/Social Post/Baereliner Weisse.jpeg";
+import social3 from "../assets/images/Social Post/Just Keep Swimming.jpeg";
+import social4 from "../assets/images/Social Post/Lemon and Oak.jpg";
+import social5 from "../assets/images/Social Post/Random Rules.jpeg";
+
 //Diggable Design imports
 import banner_mock from "../assets/images/diggable/banner-mock.jpg";
 import final_banner from "../assets/images/diggable/final-banner.jpg";
@@ -49,22 +60,23 @@ const PROJECTS = [
   {
     id: "baere-brewing",
     category: "operations",
-    type: "Operations",
+    type: "Operations · Design",
     title: "Baere Brewing Co.",
     description:
       "Co-founded and operated a craft brewery in Denver for eleven years — operations, finance, compliance, staff, marketing, logistics.",
-    stack: ["Operations", "Finance", "Compliance", "Brand"],
+    stack: ["Operations", "Finance", "Compliance", "Branding"],
     demoUrl: null,
     githubUrl: null,
     modalContent: {
-      narrative: `Co-founded Baere Brewing Company in Denver in 2013. Over eleven years, managed all aspects of operations including staff hiring and management, financial oversight, regulatory compliance (TTB, state, local), vendor relationships, logistics, and marketing. Grew the brewery from a small taproom to an established Denver institution before closing in 2024.`,
+      narrative: `Co-founded Baere Brewing Company in Denver in 2014, after 2 years of conception, design and planning. Over nine years, managed all aspects of operations including staff hiring and management, financial oversight, production, regulatory compliance (TTB, state, local, OSHA), vendor relationships, logistics, branding and marketing. Grew the brewery from a small taproom to an established, award-winning Denver institution before selling in 2023.`,
       projects: [
         {
           id: "can-art",
           title: "Package Art & Design",
           objective:
-            "Create bottle and can label art in house utilizing Adobe Illustrator & Photoshop, Procreate,  Canva and personal photography.",
+            "Objective: Create bottle and can label art in house, utilizing Adobe Illustrator & Photoshop, Procreate,  Canva and personal photography.",
           images: [
+            can_art_10,
             can_art_1,
             can_art_2,
             can_art_3,
@@ -74,7 +86,6 @@ const PROJECTS = [
             can_art_7,
             can_art_8,
             can_art_9,
-            can_art_10,
             bottle_art_1,
             bottle_art_2,
             bottle_art_3,
@@ -86,6 +97,20 @@ const PROJECTS = [
           objective:
             "Build and support connections with local small businesses. Collaborate on seasonal packages for distribution through website and in the taproom.",
           images: [local_package_1, local_package_2, local_package_3],
+        },
+        {
+          id: "anniversary",
+          title: "Cohesive Event Branding",
+          objective:
+            "Build excitement for 8th Anniversary Party through cohesive branding and marketing, tying together multiple aspects of the event into one coherent message.",
+          images: [anni1, anni2, anni3, anni4],
+        },
+        {
+          id: "social_media",
+          title: "Social Media",
+          objective:
+            "Market products through social media through creative and artistic photographs and images, showing the passion we genuinely have for our work.",
+          images: [social1, social2, social3, social4, social5],
         },
       ],
     },

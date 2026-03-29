@@ -12,25 +12,8 @@ export default function ImageCarousel({ photos, project }) {
     setActiveIndex((prev) => (prev + offset + photos.length) % photos.length);
   }
 
-  // function startAutoplay() {
-  //   intervalRef.current = setInterval(() => moveSlide(1), 4000);
-  // }
-
-  // function resetAutoplay() {
-  //   clearInterval(intervalRef.current);
-  //   startAutoplay();
-  // }
-
-  // useEffect(() => {
-  //   startAutoplay();
-  //   return () => clearInterval(intervalRef.current);
-  // }, []);
-
   return (
-    <section
-      className="carousel-div"
-      aria-label={`${project} image carousel`}
-    >
+    <section className="carousel-div" aria-label={`${project} image carousel`}>
       <div className="carousel">
         <div className="carousel-slides">
           {photos.map((photo, index) => (
