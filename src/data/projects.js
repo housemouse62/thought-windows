@@ -52,8 +52,8 @@ const PROJECTS = [
     type: "Web App · In Progress",
     title: "Poetry App",
     description:
-      "A writing tool for composing and organizing poetry. Structure and UI taking shape.",
-    stack: ["React", "JavaScript"],
+      "A poetry composition tool for haiku and limericks with real-time syllable counting and accessibility-first design.",
+    stack: ["React", "JavaScript", "CSS", "API"],
     demoUrl: "https://makepoetry.netlify.app/",
     githubUrl: "https://github.com/housemouse62/poetry-app",
   },
