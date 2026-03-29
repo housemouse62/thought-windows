@@ -112,7 +112,7 @@ export default function AccessibilitySection() {
 
         <p>
           I look forward to where this learning leads as I continue exploring
-          what’s possible within the world of both technological and real-world
+          what's possible within the world of both technological and real-world
           accessibility support systems.
         </p>
 
