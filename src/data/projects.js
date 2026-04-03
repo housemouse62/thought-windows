@@ -77,7 +77,7 @@ const PROJECTS = [
     type: "Web App · In Progress",
     title: "make poetry.",
     description:
-      "A poetry composition tool for haiku and limericks with real-time syllable counting and accessibility-first design.",
+      "A poetry composition tool for haiku and limericks, built with real-time syllable counting, accessibility-first design, and a dictionary API integration to support word discovery while writing.",
     stack: ["React", "JavaScript", "CSS", "API"],
     demoUrl: "https://makepoetry.netlify.app/",
     githubUrl: "https://github.com/housemouse62/poetry-app",
@@ -101,7 +101,7 @@ const PROJECTS = [
     type: "Web App",
     title: "Build-A-CV",
     description:
-      "Interactive resume builder in React. Add sections, edit inline, and export a formatted CV.",
+      "An interactive resume builder in React. Input your information, edit inline, and export a cleanly formatted CV — built as a practical tool and a demonstration of React state management.",
     stack: ["React", "JavaScript", "CSS"],
     demoUrl: "https://byocv.netlify.app/",
     githubUrl: "https://github.com/housemouse62/CV_Application",
