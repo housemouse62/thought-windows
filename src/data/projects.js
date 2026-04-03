@@ -37,14 +37,35 @@ import flyer_pro from "../assets/images/diggable/flyer-pro.jpg";
 import flyer_residential from "../assets/images/diggable/flyer-residential.jpg";
 import digabble_logo from "../assets/images/ProjectCards/DiggableLogo.png";
 
+//Andrea Moore Arts imports
+import ama_logo from "../assets/images/ProjectCards/ama_logo.png";
+
+import dis1 from "../assets/images/AMA/dis_health_1.png";
+import dis2 from "../assets/images/AMA/dis_health_2.png";
+import dis3 from "../assets/images/AMA/dis_health_3.png";
+import dis4 from "../assets/images/AMA/dis_health_4.png";
+import dis5 from "../assets/images/AMA/dis_health_5.png";
+
+import icon1 from "../assets/images/AMA/icon_library_1.png";
+import icon2 from "../assets/images/AMA/icon_library_2.png";
+import icon3 from "../assets/images/AMA/icon_library_3.png";
+
+import rights1 from "../assets/images/AMA/know_rights_1.png";
+import rights2 from "../assets/images/AMA/know_rights_2.png";
+import rights3 from "../assets/images/AMA/know_rights_3.png";
+import rights4 from "../assets/images/AMA/know_rights_4.png";
+
+import public1 from "../assets/images/AMA/public_health_1.png";
+import public2 from "../assets/images/AMA/public_health_2.png";
+import public3 from "../assets/images/AMA/public_health_3.png";
+import public4 from "../assets/images/AMA/public_health_4.png";
+import public5 from "../assets/images/AMA/public_health_5.png";
+
 //Bodega Inventory imports
 import bodega_logo from "../assets/images/ProjectCards/EverybodyLogo.jpeg";
 
 //BYO CV imports
 import BYO_logo from "../assets/images/ProjectCards/BYO_logo.png";
-
-//Andrea Moore Arts imports
-import ama_logo from "../assets/images/ProjectCards/ama_logo.png";
 
 //Make Poetry imports
 import make_poetry_logo from "../assets/images/ProjectCards/make_poetry_logo.png";
@@ -98,7 +119,7 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     image: baere_logo,
-    imageStyle: { height: "120px", padding: "10px 0" },
+    imageStyle: { height: "110px", margin: "10px 0" },
 
     modalContent: {
       narrative: `Co-founded Baere Brewing Company in Denver in 2014, after 2 years of conception, design and planning. Over nine years, managed all aspects of operations including staff hiring and management, financial oversight, production, regulatory compliance (TTB, state, local, OSHA), vendor relationships, logistics, branding and marketing. Grew the brewery from a small taproom to an established, award-winning Denver institution before selling in 2023.`,
@@ -107,7 +128,7 @@ const PROJECTS = [
           id: "can-art",
           title: "Package Art & Design",
           objective:
-            "Objective: Create bottle and can label art in house, utilizing Adobe Illustrator & Photoshop, Procreate,  Canva and personal photography.",
+            "Create bottle and can label art in house, utilizing Adobe Illustrator & Photoshop, Procreate, Canva and personal photography.",
           images: [
             can_art_10,
             can_art_1,
@@ -154,21 +175,39 @@ const PROJECTS = [
     type: "Design",
     title: "Andrea Moore Arts",
     description:
-      "Design and marketing support for an independent artist — collateral, promotional materials, visual communication.",
+      "Designed accessible visual content through Andrea Moore Arts for Special Olympics International projects, including an icon library, public health timelines, and educational materials for the developmental disabilities community and their advocates.",
     stack: ["Canva", "Visual Design", "Print"],
     demoUrl: null,
     githubUrl: null,
     image: ama_logo,
-    imageStyle: { height: "130px" },
+    imageStyle: { height: "120px", marginTop: "10px" },
 
     modalContent: {
-      narrative: "",
+      narrative: "Content design and visual communications work with Andrea Moore Arts on Special Olympics International contracts, supporting inclusive advocacy through accessible, audience-centered design.",
       projects: [
         {
           id: "icon-library",
           title: "Icon Library",
-          objective: "Create an icon library",
-          images: [],
+          objective: "Create a cohesive icon library of accessibility-related terminology to support the Navigating Healthcare Systems educational materials.",
+          images: [icon1, icon2, icon3],
+        },
+        {
+          id: "disability-health",
+          title: "Disability Health Timeline",
+          objective: "Design a visual timeline of health milestones within the disability community for display at a conference, contrasting lived experience against the broader public health landscape.",
+          images: [dis1, dis2, dis3, dis4, dis5],
+        },
+        {
+          id: "public-health",
+          title: "Public Health Timeline",
+          objective: "Design a visual timeline of public health milestones displayed alongside the community health timeline, forming a room-spanning installation illustrating the divergence between mainstream and community health histories.",
+          images: [public1, public2, public3, public4, public5],
+        },
+        {
+          id: "know-rights",
+          title: "Navigating Healthcare Systems",
+          objective: "Design educational slide decks focused on navigating healthcare systems for individuals with developmental disabilities and their advocates, including alt-text for screen reader compatibility.",
+          images: [rights1, rights2, rights3, rights4],
         },
       ],
     },
@@ -184,25 +223,21 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     image: digabble_logo,
-    imageStyle: { height: "150px", padding: "5px 0" },
+    imageStyle: { height: "130px", marginBottom: "5px" },
     modalContent: {
       narrative:
-        "Diggable Designs Landscape and Gardening is a small business based in Lakewood, Colorado.",
+        "Diggable Designs Landscape and Gardening is a small business based in Lakewood, Colorado. Designed print materials for use at trade conventions, targeting both residential customers and professional partners.",
       projects: [
         {
           id: "banner",
           title: "Convention Banner",
-          objective: [
-            "Create a retractable banner for use at conventions and events. It should serve two purposes: to attract potential future customers as well as potential future employees",
-          ],
+          objective: "Create a retractable banner for use at conventions and events. It should serve two purposes: to attract potential future customers as well as potential future employees.",
           images: [banner_mock, final_banner],
         },
         {
           id: "flyers",
           title: "Convention Flyers",
-          objective: [
-            "Create two similarly designed flyers, one to attract potential future customers and one to attract potential future professional partners.",
-          ],
+          objective: "Create two similarly designed flyers, one to attract potential future customers and one to attract potential future professional partners.",
           images: [flyer_pro, flyer_residential],
         },
       ],
