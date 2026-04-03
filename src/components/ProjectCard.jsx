@@ -12,6 +12,7 @@ export default function ProjectCard({ project }) {
     githubUrl,
     modalContent,
     category,
+    image,
   } = project;
 
   const hasModal = !!modalContent;
@@ -28,6 +29,7 @@ export default function ProjectCard({ project }) {
         aria-labelledby={`card-title-${project.id}`}
       >
         <div className="card-body">
+          <img src={`${image}`} />
           <p className="card-type">{type}</p>
           <h3 className="card-title" id={`card-title-${project.id}`}>
             {title}

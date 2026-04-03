@@ -377,6 +377,7 @@ img {
   border: 2px solid var(--ink);
   display: flex;
   flex-direction: column;
+  min-height: 400px;
   transition:
     transform 0.2s,
     box-shadow 0.2s;

@@ -28,13 +28,42 @@ import social3 from "../assets/images/Social Post/Just Keep Swimming.jpeg";
 import social4 from "../assets/images/Social Post/Lemon and Oak.jpg";
 import social5 from "../assets/images/Social Post/Random Rules.jpeg";
 
+import baere_logo from "../assets/images/ProjectCards/BaereLogo.png";
+
 //Diggable Design imports
 import banner_mock from "../assets/images/diggable/banner-mock.jpg";
 import final_banner from "../assets/images/diggable/final-banner.jpg";
 import flyer_pro from "../assets/images/diggable/flyer-pro.jpg";
 import flyer_residential from "../assets/images/diggable/flyer-residential.jpg";
+import digabble_logo from "../assets/images/ProjectCards/DiggableLogo.png";
 
+//Bodega Inventory imports
+import bodega_logo from "../assets/images/ProjectCards/EverybodyLogo.jpeg";
 const PROJECTS = [
+  {
+    id: "poetry-app",
+    category: "web",
+    type: "Web App · In Progress",
+    title: "make poetry",
+    description:
+      "A poetry composition tool for haiku and limericks with real-time syllable counting and accessibility-first design.",
+    stack: ["React", "JavaScript", "CSS", "API"],
+    demoUrl: "https://makepoetry.netlify.app/",
+    githubUrl: "https://github.com/housemouse62/poetry-app",
+    image: "",
+  },
+  {
+    id: "bodega-inventory",
+    category: "web",
+    type: "Web App",
+    title: "Everybody's Bodega",
+    description:
+      "A full-stack inventory management app for a corner store. Browse and manage products by category, with sorting, image support, and session-based admin authentication.",
+    stack: ["Node.js", "Express", "PostgreSQL", "EJS"],
+    demoUrl: "https://bodega-inventory-production.up.railway.app/",
+    githubUrl: "https://github.com/housemouse62/bodega-inventory",
+    image: bodega_logo,
+  },
   {
     id: "cv-builder",
     category: "web",
@@ -46,17 +75,7 @@ const PROJECTS = [
     demoUrl: "https://byocv.netlify.app/", // TODO: replace
     githubUrl: "https://github.com/housemouse62/CV_Application", // TODO: replace
   },
-  {
-    id: "poetry-app",
-    category: "web",
-    type: "Web App · In Progress",
-    title: "Poetry App",
-    description:
-      "A poetry composition tool for haiku and limericks with real-time syllable counting and accessibility-first design.",
-    stack: ["React", "JavaScript", "CSS", "API"],
-    demoUrl: "https://makepoetry.netlify.app/",
-    githubUrl: "https://github.com/housemouse62/poetry-app",
-  },
+
   {
     id: "baere-brewing",
     category: "operations",
@@ -67,6 +86,7 @@ const PROJECTS = [
     stack: ["Operations", "Finance", "Compliance", "Branding"],
     demoUrl: null,
     githubUrl: null,
+    image: baere_logo,
     modalContent: {
       narrative: `Co-founded Baere Brewing Company in Denver in 2014, after 2 years of conception, design and planning. Over nine years, managed all aspects of operations including staff hiring and management, financial oversight, production, regulatory compliance (TTB, state, local, OSHA), vendor relationships, logistics, branding and marketing. Grew the brewery from a small taproom to an established, award-winning Denver institution before selling in 2023.`,
       projects: [
@@ -147,6 +167,7 @@ const PROJECTS = [
     stack: ["Canva", "Print Design"],
     demoUrl: null,
     githubUrl: null,
+    image: digabble_logo,
     modalContent: {
       narrative:
         "Diggable Designs Landscape and Gardening is a small business based in Lakewood, Colorado.",
