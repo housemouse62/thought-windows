@@ -377,11 +377,12 @@ img {
   border: 2px solid var(--ink);
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 480px;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
 }
+
 .project-card::before {
   content: "";
   display: block;
@@ -389,26 +390,35 @@ img {
   background: var(--stripe-def);
   flex-shrink: 0;
 }
+
 .project-card--web::before {
   background: var(--stripe-web);
 }
+
 .project-card--design::before {
   background: var(--stripe-design);
 }
+
 .project-card--operations::before {
   background: var(--stripe-ops);
+}
+
+.project-card--clickable {
+  cursor: pointer;
 }
 
 .project-card:hover {
   transform: translate(-3px, -3px);
   box-shadow: 5px 5px 0 var(--ink);
 }
+
 .card-body {
   padding: 1.35rem 1.4rem 1.1rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
 .card-type {
   font-family: var(--mono);
   font-size: 0.8srem;
@@ -417,6 +427,7 @@ img {
   color: var(--ct-def);
   margin-bottom: 0.5rem;
 }
+
 .project-card--web .card-type {
   color: var(--ct-web);
 }
@@ -427,14 +438,15 @@ img {
   color: var(--ct-ops);
 }
 
-.card-title {
+/* .card-title {
   font-family: var(--serif);
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5rem;
   color: var(--ink);
-}
+} */
+
 .card-desc {
   font-size: 1.1rem;
   color: var(--muted);
@@ -449,12 +461,23 @@ img {
   margin-bottom: 1rem;
 }
 .card-tag {
+  height: fit-content;
   font-family: var(--mono);
   font-size: 0.8rem;
   color: var(--ink);
   border: 1px solid var(--tag-bdr);
   padding: 0.15rem 0.5rem;
   background: var(--tag-bg);
+}
+.card-image {
+  height: 120px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-line {
+  margin: 10px 0;
 }
 .card-footer {
   display: flex;

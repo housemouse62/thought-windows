@@ -39,18 +39,28 @@ import digabble_logo from "../assets/images/ProjectCards/DiggableLogo.png";
 
 //Bodega Inventory imports
 import bodega_logo from "../assets/images/ProjectCards/EverybodyLogo.jpeg";
+
+//BYO CV imports
+import BYO_logo from "../assets/images/ProjectCards/BYO_logo.png";
+
+//Andrea Moore Arts imports
+import ama_logo from "../assets/images/ProjectCards/ama_logo.png";
+
+//Make Poetry imports
+import make_poetry_logo from "../assets/images/ProjectCards/make_poetry_logo.png";
+
 const PROJECTS = [
   {
     id: "poetry-app",
     category: "web",
     type: "Web App · In Progress",
-    title: "make poetry",
+    title: "make poetry.",
     description:
       "A poetry composition tool for haiku and limericks with real-time syllable counting and accessibility-first design.",
     stack: ["React", "JavaScript", "CSS", "API"],
     demoUrl: "https://makepoetry.netlify.app/",
     githubUrl: "https://github.com/housemouse62/poetry-app",
-    image: "",
+    image: make_poetry_logo,
   },
   {
     id: "bodega-inventory",
@@ -72,8 +82,9 @@ const PROJECTS = [
     description:
       "Interactive resume builder in React. Add sections, edit inline, and export a formatted CV.",
     stack: ["React", "JavaScript", "CSS"],
-    demoUrl: "https://byocv.netlify.app/", // TODO: replace
-    githubUrl: "https://github.com/housemouse62/CV_Application", // TODO: replace
+    demoUrl: "https://byocv.netlify.app/",
+    githubUrl: "https://github.com/housemouse62/CV_Application",
+    image: BYO_logo,
   },
 
   {
@@ -87,6 +98,8 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     image: baere_logo,
+    imageStyle: { height: "120px", padding: "10px 0" },
+
     modalContent: {
       narrative: `Co-founded Baere Brewing Company in Denver in 2014, after 2 years of conception, design and planning. Over nine years, managed all aspects of operations including staff hiring and management, financial oversight, production, regulatory compliance (TTB, state, local, OSHA), vendor relationships, logistics, branding and marketing. Grew the brewery from a small taproom to an established, award-winning Denver institution before selling in 2023.`,
       projects: [
@@ -145,6 +158,9 @@ const PROJECTS = [
     stack: ["Canva", "Visual Design", "Print"],
     demoUrl: null,
     githubUrl: null,
+    image: ama_logo,
+    imageStyle: { height: "130px" },
+
     modalContent: {
       narrative: "",
       projects: [
@@ -168,6 +184,7 @@ const PROJECTS = [
     demoUrl: null,
     githubUrl: null,
     image: digabble_logo,
+    imageStyle: { height: "150px", padding: "5px 0" },
     modalContent: {
       narrative:
         "Diggable Designs Landscape and Gardening is a small business based in Lakewood, Colorado.",

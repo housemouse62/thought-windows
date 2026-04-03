@@ -13,27 +13,40 @@ export default function ProjectCard({ project }) {
     modalContent,
     category,
     image,
+    imageStyle,
   } = project;
 
   const hasModal = !!modalContent;
 
-  function handleCardAction(e) {
-    e.preventDefault();
-    if (hasModal) setModalOpen(true);
+  function handleCardClick(e) {
+    if (e.target.closest("a, button")) return;
+    if (demoUrl) {
+      window.open(demoUrl, "_blank", "noopener,noreferrer");
+    } else if (hasModal) {
+      setModalOpen(true);
+    }
   }
 
   return (
     <>
       <article
-        className={`project-card project-card--${category}`}
+        className={`project-card project-card--${category}${demoUrl || hasModal ? " project-card--clickable" : ""}`}
         aria-labelledby={`card-title-${project.id}`}
+        onClick={handleCardClick}
       >
         <div className="card-body">
-          <img src={`${image}`} />
-          <p className="card-type">{type}</p>
-          <h3 className="card-title" id={`card-title-${project.id}`}>
+          <div className="card-top">
+            <p className="card-type">{type}</p>
+          </div>
+          <img
+            className="card-title card-image"
+            src={`${image}`}
+            style={imageStyle}
+          />
+          {/* <h3 className="card-title" id={`card-title-${project.id}`}>
             {title}
-          </h3>
+          </h3> */}
+          <hr className="card-line"></hr>
           <p className="card-desc">{description}</p>
           <div className="card-tags" aria-label="Stack / skills">
             {stack.map((tag) => (
@@ -70,7 +83,7 @@ export default function ProjectCard({ project }) {
           {hasModal && (
             <button
               className="card-link card-link-btn"
-              onClick={handleCardAction}
+              onClick={() => setModalOpen(true)}
               aria-label={`View details for ${title}`}
             >
               View work →
