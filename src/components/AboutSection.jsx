@@ -59,7 +59,7 @@ export default function AboutSection() {
           </p>
 
           <p>
-            n 2023, my family and I moved to Valencia, Spain. We raised our
+            In 2023, my family and I moved to Valencia, Spain. We raised our
             children to be English and Spanish speakers, and we wanted them to
             experience living in another place and develop a deeper cultural
             understanding and fluency. We also wanted to step outside our own
@@ -77,9 +77,11 @@ export default function AboutSection() {
             playing old MS-DOS games, passing around shareware disks, and
             building custom levels with the Duke Nukem level editor. I taught
             myself HTML back in the GeoCities era, making how-to-skateboard
-            pages with blinking text and animated GIFs, and I've been building
-            that skill back up—this time with modern tools and a lot more
-            intention behind it.
+            pages with blinking text and animated GIFs. This time around I'm
+            working with a significantly more advanced set of tools — nearing
+            completion of The Odin Project's full-stack JavaScript curriculum,
+            building apps along the way using HTML, CSS, JavaScript, React,
+            Node.js, Express, and PostgreSQL.
           </p>
 
           <p className="about-cta">

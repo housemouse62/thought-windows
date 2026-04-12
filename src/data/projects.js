@@ -110,12 +110,12 @@ const PROJECTS = [
 
   {
     id: "baere-brewing",
-    category: "operations",
+    category: "design",
     type: "Operations · Design",
     title: "Baere Brewing Co.",
     description:
       "Co-founded and operated a craft brewery in Denver for eleven years — operations, finance, compliance, staff, marketing, logistics.",
-    stack: ["Operations", "Finance", "Compliance", "Branding"],
+    stack: ["Operations", "Finance", "Compliance", "Design", "Branding"],
     demoUrl: null,
     githubUrl: null,
     image: baere_logo,
@@ -183,30 +183,35 @@ const PROJECTS = [
     imageStyle: { height: "120px", marginTop: "10px" },
 
     modalContent: {
-      narrative: "Content design and visual communications work with Andrea Moore Arts on Special Olympics International contracts, supporting inclusive advocacy through accessible, audience-centered design.",
+      narrative:
+        "Content design and visual communications work with Andrea Moore Arts on Special Olympics International contracts, supporting inclusive advocacy through accessible, audience-centered design.",
       projects: [
         {
           id: "icon-library",
           title: "Icon Library",
-          objective: "Create a cohesive icon library of accessibility-related terminology to support the Navigating Healthcare Systems educational materials.",
+          objective:
+            "Create a cohesive icon library of accessibility-related terminology to support the Navigating Healthcare Systems educational materials.",
           images: [icon1, icon2, icon3],
         },
         {
           id: "disability-health",
           title: "Disability Health Timeline",
-          objective: "Design a visual timeline of health milestones within the disability community for display at a conference, contrasting lived experience against the broader public health landscape.",
+          objective:
+            "Design a visual timeline of health milestones within the disability community for display at a conference, contrasting lived experience against the broader public health landscape.",
           images: [dis1, dis2, dis3, dis4, dis5],
         },
         {
           id: "public-health",
           title: "Public Health Timeline",
-          objective: "Design a visual timeline of public health milestones displayed alongside the community health timeline, forming a room-spanning installation illustrating the divergence between mainstream and community health histories.",
+          objective:
+            "Design a visual timeline of public health milestones displayed alongside the community health timeline, forming a room-spanning installation illustrating the divergence between mainstream and community health histories.",
           images: [public1, public2, public3, public4, public5],
         },
         {
           id: "know-rights",
           title: "Navigating Healthcare Systems",
-          objective: "Design educational slide decks focused on navigating healthcare systems for individuals with developmental disabilities and their advocates, including alt-text for screen reader compatibility.",
+          objective:
+            "Design educational slide decks focused on navigating healthcare systems for individuals with developmental disabilities and their advocates, including alt-text for screen reader compatibility.",
           images: [rights1, rights2, rights3, rights4],
         },
       ],
@@ -231,13 +236,15 @@ const PROJECTS = [
         {
           id: "banner",
           title: "Convention Banner",
-          objective: "Create a retractable banner for use at conventions and events. It should serve two purposes: to attract potential future customers as well as potential future employees.",
+          objective:
+            "Create a retractable banner for use at conventions and events. It should serve two purposes: to attract potential future customers as well as potential future employees.",
           images: [banner_mock, final_banner],
         },
         {
           id: "flyers",
           title: "Convention Flyers",
-          objective: "Create two similarly designed flyers, one to attract potential future customers and one to attract potential future professional partners.",
+          objective:
+            "Create two similarly designed flyers, one to attract potential future customers and one to attract potential future professional partners.",
           images: [flyer_pro, flyer_residential],
         },
       ],

@@ -17,7 +17,7 @@ const FILTERS = [
   { label: "All", value: "all" },
   { label: "Web Apps", value: "web" },
   { label: "Design", value: "design" },
-  { label: "Operations", value: "operations" },
+  // { label: "Operations", value: "operations" },
 ];
 
 export default function App() {
@@ -57,7 +57,9 @@ export default function App() {
           {activeSection === "Work" && (
             <>
               <div className="content-header">
-                <h2 className="content-heading">Selected Work</h2>
+                <h2 className="content-heading">
+                  Selected Design & Web Dev Work
+                </h2>
                 <span className="content-count" aria-live="polite">
                   {filteredProjects.length} project
                   {filteredProjects.length !== 1 ? "s" : ""}
