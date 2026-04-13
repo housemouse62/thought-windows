@@ -6,6 +6,10 @@ A personal portfolio website built to showcase professional experience and proje
 
 ---
 
+![Thought Windows screenshot](src/assets/images/Thought%20Windows%20Screen.png)
+
+---
+
 ## About
 
 This portfolio reflects a career in motion. It documents both completed and in-progress work across three disciplines:

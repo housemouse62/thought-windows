@@ -16,11 +16,31 @@ li {
     -10px 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+.cv-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cv-toggle-btn {
+  padding: 0.3rem 0.9rem;
+  border: 1px solid #4872a7;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #4872a7;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.cv-toggle-btn:hover {
+  background-color: #4872a7;
+  color: white;
+}
+
 .cv-download {
   display: block;
   width: fit-content;
-  margin-left: auto;
-  margin-bottom: 1rem;
   padding: 0.3rem 0.9rem;
   background-color: #4872a7;
   color: white;
@@ -108,6 +128,13 @@ h3::after {
 .school-meta,
 .tech-meta {
   font-style: italic;
+}
+
+.job-note {
+  font-size: 0.85rem;
+  color: #4872a7;
+  font-style: italic;
+  margin-top: 0.2rem;
 }
 
 .edu-location,
