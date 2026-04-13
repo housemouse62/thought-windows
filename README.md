@@ -26,8 +26,9 @@ The site itself is also a project — built with React and plain CSS, with a foc
 
 - Filterable project grid by category (Web, Design, Operations)
 - Project modals with image carousels and sub-project navigation
-- Dedicated Accessibility section documenting intentional a11y decisions
-- CV and About sections
+- CV section with two views: Program-Led and Chronological, plus PDF download
+- Accessibility section with personal narrative and documented a11y decisions
+- About section
 - Keyboard navigable throughout
 - Respects `prefers-reduced-motion`
 - Skip-to-main link for screen reader users
@@ -59,9 +60,9 @@ src/
 │   ├── ProjectCard.jsx   # Individual project card
 │   ├── Modal.jsx         # Project detail modal with sub-project navigation
 │   ├── ImageCarousel.jsx # Photo carousel inside modals
-│   ├── CVSection.jsx     # Resume / work history
+│   ├── CVSection.jsx     # Resume / work history (two views + PDF download)
 │   ├── AboutSection.jsx  # Personal bio
-│   ├── AccessibilitySection.jsx  # a11y decisions and rationale
+│   ├── AccessibilitySection.jsx  # Personal a11y narrative and documented decisions
 │   ├── Header.jsx
 │   ├── TopNav.jsx
 │   ├── FilterNav.jsx
@@ -98,31 +99,35 @@ Accessibility is treated as a first-class concern, not an afterthought:
 - Escape key closes modals
 - `focus-visible` outlines on all interactive elements
 - `prefers-reduced-motion` respected for all transitions
+- DHS Trusted Tester certification (June 2025)
 
 ---
 
-## Selected Projects
+## Projects
+
+### make poetry.
+A poetry composition tool for haiku and limericks with real-time syllable counting, dictionary API integration, and accessibility-first design. In progress.
+[Demo](https://makepoetry.netlify.app/) · [GitHub](https://github.com/housemouse62/poetry-app)
+
+### Everybody's Bodega
+Full-stack inventory management app for a corner store. Browse and manage products by category with sorting, image support, and session-based admin authentication.
+[Demo](https://bodega-inventory-production.up.railway.app/) · [GitHub](https://github.com/housemouse62/bodega-inventory)
 
 ### Build-A-CV
-
-Interactive resume builder in React. Add sections, edit inline, and export a formatted CV.
+Interactive resume builder in React. Input your information, edit inline, and export a cleanly formatted CV.
 [Demo](https://byocv.netlify.app/) · [GitHub](https://github.com/housemouse62/CV_Application)
 
-### Poetry App
-
-A writing tool for composing and organizing poetry. In progress.
-[Demo](https://makepoetry.netlify.app/haiku) · [GitHub](https://github.com/housemouse62/poetry-app)
-
 ### Baere Brewing Co.
+Co-founded and operated a craft brewery in Denver for eleven years — operations, finance, TTB compliance, staff, branding, packaging design, and logistics. Sold in 2023.
 
-Co-founded and operated a craft brewery in Denver for eleven years — handling operations, finance, TTB compliance, staff, branding, and logistics.
+### Andrea Moore Arts
+Accessible visual content for Special Olympics International projects: icon library, public health timelines, disability health timelines, and educational slide decks for the IDD community.
 
 ### Diggable Designs
-
-Flyer and banner design for a landscape and construction company. Promotional materials for real-world use.
+Convention banner and flyer design for a landscape and construction company.
 
 ---
 
 ## Author
 
-Ryan Skeels — career-transitioning developer based in Denver, CO.
+Ryan Skeels — operations & program manager transitioning into software development. Based in Valencia, Spain (relocating to Denver, CO in July 2026).
