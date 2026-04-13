@@ -2,7 +2,7 @@
 
 A personal portfolio website built to showcase professional experience and projects across web development, graphic design, and business operations — built during a career transition into software development.
 
-**Live site:** _(add your URL here)_
+**Live site:** [thoughtwindows.com](https://thoughtwindows.com)
 
 ---
 
@@ -36,12 +36,12 @@ The site itself is also a project — built with React and plain CSS, with a foc
 
 ## Tech Stack
 
-| Tool | Purpose |
-|---|---|
-| React 19 | UI |
-| Vite | Build tool |
-| React Router 7 | Routing |
-| Plain CSS | Styling (no component library) |
+| Tool           | Purpose                        |
+| -------------- | ------------------------------ |
+| React 19       | UI                             |
+| Vite           | Build tool                     |
+| React Router 7 | Routing                        |
+| Plain CSS      | Styling (no component library) |
 
 No UI frameworks. No CSS-in-JS. Styles are hand-written and organized by component.
 
@@ -104,17 +104,21 @@ Accessibility is treated as a first-class concern, not an afterthought:
 ## Selected Projects
 
 ### Build-A-CV
+
 Interactive resume builder in React. Add sections, edit inline, and export a formatted CV.
 [Demo](https://byocv.netlify.app/) · [GitHub](https://github.com/housemouse62/CV_Application)
 
 ### Poetry App
+
 A writing tool for composing and organizing poetry. In progress.
 [Demo](https://makepoetry.netlify.app/haiku) · [GitHub](https://github.com/housemouse62/poetry-app)
 
 ### Baere Brewing Co.
+
 Co-founded and operated a craft brewery in Denver for eleven years — handling operations, finance, TTB compliance, staff, branding, and logistics.
 
 ### Diggable Designs
+
 Flyer and banner design for a landscape and construction company. Promotional materials for real-world use.
 
 ---
