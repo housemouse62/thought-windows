@@ -14,13 +14,37 @@ export default function ProjectCard({ project }) {
     category,
     image,
     imageStyle,
+    desktopOnly,
   } = project;
 
   const hasModal = !!modalContent;
 
+  function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+  }
+
+  function openDemo(e) {
+    if (desktopOnly && isMobile()) {
+      const proceed = window.confirm(
+        "This project was built for desktop and may not display well on mobile. Open it anyway?"
+      );
+      if (!proceed) {
+        e.preventDefault();
+        return false;
+      }
+    }
+    return true;
+  }
+
   function handleCardClick(e) {
     if (e.target.closest("a, button")) return;
     if (demoUrl) {
+      if (desktopOnly && isMobile()) {
+        const proceed = window.confirm(
+          "This project was built for desktop and may not display well on mobile. Open it anyway?"
+        );
+        if (!proceed) return;
+      }
       window.open(demoUrl, "_blank", "noopener,noreferrer");
     } else if (hasModal) {
       setModalOpen(true);
@@ -65,6 +89,7 @@ export default function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View live demo of ${title}`}
+              onClick={openDemo}
             >
               Live demo →
             </a>

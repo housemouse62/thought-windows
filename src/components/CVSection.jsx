@@ -1,10 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CVSection.css";
 import headshot from "../assets/images/headshot.jpeg";
 
+const HASH_TO_VIEW = {
+  "#program-manager": "program-manager",
+  "#onboarding-manager": "onboarding-manager",
+  "#full-history": "full-history",
+};
+
+const VIEW_TO_HASH = {
+  "program-manager": "#program-manager",
+  "onboarding-manager": "#onboarding-manager",
+  "full-history": "#full-history",
+};
+
+function getViewFromHash() {
+  return HASH_TO_VIEW[window.location.hash] || "program-manager";
+}
+
 export default function CVSection() {
-  const [view, setView] = useState("program-led");
-  const isProgramLed = view === "program-led";
+  const [view, setView] = useState(getViewFromHash);
+
+  function handleViewChange(newView) {
+    setView(newView);
+    window.history.replaceState(null, "", VIEW_TO_HASH[newView]);
+  }
+
+  useEffect(() => {
+    function onHashChange() {
+      setView(getViewFromHash());
+    }
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  const isProgramManager = view === "program-manager";
+  const isOnboardingManager = view === "onboarding-manager";
+  const isFullHistory = view === "full-history";
 
   return (
     <section aria-label="Curriculum Vitae" className="cv">
@@ -27,7 +59,7 @@ export default function CVSection() {
           </section>
 
           <section aria-label="skills" className="skills">
-            {isProgramLed ? (
+            {isProgramManager && (
               <>
                 <h4>Program & Operations Management</h4>
                 <ul>
@@ -64,7 +96,48 @@ export default function CVSection() {
                   <li>Alt-text, ARIA, semantic HTML, screen reader testing</li>
                 </ul>
               </>
-            ) : (
+            )}
+
+            {isOnboardingManager && (
+              <>
+                <h4>Training & Customer Enablement</h4>
+                <ul>
+                  <li>Onboarding program design & delivery</li>
+                  <li>Training material & SOP development</li>
+                  <li>Cross-cultural communication</li>
+                  <li>Change management & tool adoption</li>
+                  <li>Customer success & relationship management</li>
+                  <li>Multilingual instruction & support</li>
+                  <li>Process design & improvement</li>
+                  <li>Cross-functional collaboration</li>
+                </ul>
+
+                <h4>Tools</h4>
+                <ul>
+                  <li>Slack (administered)</li>
+                  <li>Google Workspace (Sheets, Docs, Drive, Calendar)</li>
+                  <li>QuickBooks</li>
+                  <li>Adobe Illustrator & Photoshop</li>
+                  <li>Canva</li>
+                </ul>
+
+                <h4>AI in Practice</h4>
+                <ul>
+                  <li>Claude, ChatGPT, Gemini</li>
+                  <li>Documentation & summarization</li>
+                  <li>Research & workflow acceleration</li>
+                </ul>
+
+                <h4>Technical</h4>
+                <ul>
+                  <li>Web Accessibility Testing (DHS Trusted Tester / WCAG)</li>
+                  <li>HTML, CSS, JavaScript, React, Node.js, SQL</li>
+                  <li>Alt-text, ARIA, semantic HTML, screen reader testing</li>
+                </ul>
+              </>
+            )}
+
+            {isFullHistory && (
               <>
                 <h4>Operations & Strategy</h4>
                 <ul>
@@ -105,19 +178,33 @@ export default function CVSection() {
 
         <div className="cv-main">
           <div className="cv-controls">
-            <button
-              className="cv-toggle-btn"
-              onClick={() =>
-                setView(isProgramLed ? "chronological" : "program-led")
-              }
-            >
-              {isProgramLed
-                ? "Switch to Timeline View"
-                : "Switch to Program View"}
-            </button>
+            <div className="cv-toggles">
+              <button
+                className={`cv-toggle-btn${isProgramManager ? " active" : ""}`}
+                onClick={() => handleViewChange("program-manager")}
+              >
+                Program Manager
+              </button>
+              <button
+                className={`cv-toggle-btn${isOnboardingManager ? " active" : ""}`}
+                onClick={() => handleViewChange("onboarding-manager")}
+              >
+                Onboarding Manager
+              </button>
+              <button
+                className={`cv-toggle-btn${isFullHistory ? " active" : ""}`}
+                onClick={() => handleViewChange("full-history")}
+              >
+                Full History
+              </button>
+            </div>
             <a
               href={
-                isProgramLed ? "/RSkeels CV Program.pdf" : "/ryan-skeels-cv.pdf"
+                isProgramManager
+                  ? "/RSkeels CV Program.pdf"
+                  : isOnboardingManager
+                    ? "/RSkeels Onboarding CV.pdf"
+                    : "/ryan-skeels-cv.pdf"
               }
               download
               className="cv-download"
@@ -130,7 +217,7 @@ export default function CVSection() {
             <h3 id="summary-heading" className="visually-hidden">
               Professional Summary
             </h3>
-            {isProgramLed ? (
+            {isProgramManager && (
               <p className="summary">
                 Operations & program manager with 15+ years of experience
                 designing and leading programs across small business, public
@@ -141,7 +228,21 @@ export default function CVSection() {
                 tool implementation, and change management. Actively developing
                 skills in web development and accessibility.
               </p>
-            ) : (
+            )}
+            {isOnboardingManager && (
+              <p className="summary">
+                Operations and training leader with 15+ years of experience
+                helping people succeed with complex systems — writing the
+                materials, delivering the information, and building the
+                operational infrastructure that makes it all scale. Known for
+                adapting to the audience, communicating across language and
+                cultural barriers, and staying present while people figure it
+                out. Experienced in cross-functional coordination, process
+                design, tool implementation, and change management. Actively
+                developing skills in web development and accessibility.
+              </p>
+            )}
+            {isFullHistory && (
               <p className="summary">
                 I'm an operations leader & systems builder with 15+ years of
                 experience across small business leadership, public service, and
@@ -156,7 +257,7 @@ export default function CVSection() {
             )}
           </section>
 
-          {isProgramLed && (
+          {isProgramManager && (
             <section aria-labelledby="programs-heading" className="experience">
               <h3 id="programs-heading">
                 Selected Programs & Operational Impact
@@ -210,10 +311,69 @@ export default function CVSection() {
             </section>
           )}
 
+          {isOnboardingManager && (
+            <section
+              aria-labelledby="enablement-heading"
+              className="experience"
+            >
+              <h3 id="enablement-heading">Training & Enablement Highlights</h3>
+
+              <article>
+                <h4>Regulatory Onboarding — Denver's food industry</h4>
+                <p>
+                  Worked across Denver's diverse restaurant and food service
+                  community, onboarding operators from all over the world onto
+                  complex public health regulatory requirements. Developed
+                  compliance materials in plain language — procedural guides,
+                  temperature logs, kitchen signage — tailored to operators with
+                  varying levels of English proficiency, building genuine
+                  understanding.
+                </p>
+              </article>
+
+              <article>
+                <h4>System Rollout & Staff Training — Baere Brewing</h4>
+                <p>
+                  Led evaluation, rollout, and staff training for two successive
+                  POS systems, a new time-tracking platform and evolving
+                  production procedures. Built training documentation and
+                  standard operating procedures, delivered hands-on sessions,
+                  troubleshot in real time, and managed resistance to change —
+                  driving successful adoption across a 10-person team.
+                </p>
+              </article>
+
+              <article>
+                <h4>Technical Equipment Training — Jeffco Open Space</h4>
+                <p>
+                  Developed training materials and delivered hands-on training
+                  for seasonal field crews on chainsaw operation, heavy
+                  machinery, and equipment maintenance — adapting instruction to
+                  varying experience levels and ensuring safety compliance
+                  across multiple concurrent projects.
+                </p>
+              </article>
+
+              <article>
+                <h4>
+                  Accessibility-Focused Educational Materials — Special Olympics
+                </h4>
+                <p>
+                  Designed and developed educational materials for Special
+                  Olympics International, including accessible icon libraries,
+                  visual public health timelines, and slide decks helping
+                  individuals with developmental disabilities and their allies
+                  navigate healthcare systems — applying user-centered design
+                  throughout.
+                </p>
+              </article>
+            </section>
+          )}
+
           <section aria-labelledby="experience-heading" className="experience">
             <h3 id="experience-heading">Experience</h3>
 
-            {isProgramLed ? (
+            {isProgramManager && (
               <>
                 <article>
                   <h4 aria-label="Co-Owner, Co-Founder, Operations Manager">
@@ -383,7 +543,199 @@ export default function CVSection() {
                   </ul>
                 </article>
               </>
-            ) : (
+            )}
+
+            {isOnboardingManager && (
+              <>
+                <article>
+                  <h4 aria-label="Co-Owner, Co-Founder, Operations Manager">
+                    Co-Owner | Co-Founder | Operations Manager
+                  </h4>
+                  <p className="job-meta">
+                    <span>Baere Brewing Company</span>
+                    <span aria-hidden="true"> | </span>
+                    <span>Denver, Colorado</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2012">2012</time> —{" "}
+                    <time dateTime="2023">2023</time>
+                  </p>
+                  <ul>
+                    <li>
+                      Conceived, built, ran, and eventually sold a respected
+                      production and hospitality business over the course of
+                      twelve years — designing the systems, training the team,
+                      and building the documentation that made it run
+                      independently.
+                    </li>
+                    <li>
+                      Wrote all training documentation and SOPs across every
+                      role in the business — front of house, back of house, and
+                      production — enabling independent execution and consistent
+                      onboarding of new staff
+                    </li>
+                    <li>
+                      Led implementation of two successive POS systems and a new
+                      time-tracking platform — building training, delivering
+                      sessions, troubleshooting in real time, and driving
+                      adoption across the team
+                    </li>
+                    <li>
+                      Administered Slack as the team's primary communication
+                      platform from 2016, managing channels, workflows, and
+                      information flow across staff and operations
+                    </li>
+                    <li>
+                      Spearheaded COVID-19 operational pivot: launched online
+                      ordering and new fulfillment workflows, trained staff on
+                      new processes in real time, and coordinated across vendors
+                      and evolving regulatory requirements
+                    </li>
+                    <li>
+                      Built and maintained operational tracking systems (Google
+                      Sheets, QuickBooks) for production scheduling, financials,
+                      and inventory — improving visibility and decision-making
+                    </li>
+                    <li>
+                      Oversaw ~$500K annual budget including payroll,
+                      accounting, tax compliance, and financial reporting
+                    </li>
+                  </ul>
+                </article>
+
+                <article>
+                  <h4>English Language Teacher &amp; Tutor</h4>
+                  <p className="job-meta">
+                    <span>CEIP San Clemente &amp; Online</span>
+                    <span aria-hidden="true"> | </span>
+                    <span>Sedaví, Valencia, Spain</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2024-10">October 2024</time> — Present
+                  </p>
+                  <ul>
+                    <li>
+                      Deliver bilingual instruction across multiple classrooms
+                      and age groups, adapting materials, pacing, and approach
+                      to meet students where they are
+                    </li>
+                    <li>
+                      Develop lesson plans, educational materials, and
+                      assessment tools tailored to varying proficiency levels
+                      and learning needs
+                    </li>
+                    <li>
+                      Use AI tools (Claude, ChatGPT) to streamline content
+                      generation, lesson planning, and workflow efficiency
+                    </li>
+                  </ul>
+                </article>
+
+                <article>
+                  <h4>
+                    Content Designer &amp; Visual Communications Specialist
+                  </h4>
+                  <p className="job-meta">
+                    <span>Andrea Moore Arts</span>
+                    <span aria-hidden="true"> | </span>
+                    <span>Special Olympics International projects</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2024-06">June 2024</time> — Present
+                  </p>
+                  <ul>
+                    <li>
+                      Created a cohesive icon library aligned with
+                      disability-related vocabulary and curated a visual public
+                      health timeline aligned with accessibility standards
+                    </li>
+                    <li>
+                      Designed presentation materials and educational slide
+                      decks focused on navigating healthcare systems for
+                      individuals with developmental disabilities and their
+                      allies, including alt-text for images to support screen
+                      reader compatibility
+                    </li>
+                  </ul>
+                </article>
+
+                <article>
+                  <h4>Business Sale &amp; Relocation to Spain</h4>
+                  <p className="job-meta">
+                    <span>Denver, CO &amp; Valencia, Spain</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2023-03">March 2023</time> — Present
+                  </p>
+                  <ul>
+                    <li>
+                      Managed sale and operational handover of Baere Brewing
+                      Company; relocated family to Valencia, Spain for a planned
+                      period of language immersion and cross-cultural experience
+                    </li>
+                  </ul>
+                </article>
+
+                <article>
+                  <h4>Environmental Health Investigator II</h4>
+                  <p className="job-meta">
+                    <span>City of Denver Public Health &amp; Environment</span>
+                    <span aria-hidden="true"> | </span>
+                    <span>Denver, Colorado</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2012">2012</time> —{" "}
+                    <time dateTime="2014">2014</time>
+                  </p>
+                  <ul>
+                    <li>
+                      Worked across Denver's diverse business community,
+                      communicating regulatory requirements and developing
+                      compliance materials — procedural guides, temperature
+                      logs, kitchen signage — for operators with varying levels
+                      of English proficiency
+                    </li>
+                    <li>
+                      Authored training video scripts and developed training
+                      programs for new staff and facility operators on
+                      regulatory standards and safe operating practices
+                    </li>
+                    <li>
+                      Managed a self-directed inspection program, tracking
+                      compliance deadlines, follow-ups, and enforcement actions
+                      across a large facility portfolio with no administrative
+                      support
+                    </li>
+                  </ul>
+                </article>
+
+                <article>
+                  <h4>Natural Resource Specialist</h4>
+                  <p className="job-meta">
+                    <span>Jefferson County Open Space</span>
+                    <span aria-hidden="true"> | </span>
+                    <span>Golden, Colorado</span>
+                    <span aria-hidden="true"> | </span>
+                    <time dateTime="2008">2008</time> —{" "}
+                    <time dateTime="2012">2012</time>
+                  </p>
+                  <ul>
+                    <li>
+                      Developed training materials and delivered hands-on
+                      training for seasonal crews on chainsaw operation, heavy
+                      machinery, and equipment maintenance
+                    </li>
+                    <li>
+                      Supervised and coordinated field crews of 6–8 across
+                      multiple concurrent projects, balancing work site
+                      requirements, team needs, and individual strengths
+                    </li>
+                    <li>
+                      Planned, designed, executed, and reported on large-scale
+                      forest restoration and habitat conservation projects
+                      across public lands
+                    </li>
+                  </ul>
+                </article>
+              </>
+            )}
+
+            {isFullHistory && (
               <>
                 <article>
                   <h4>English Language Teacher &amp; Tutor</h4>
@@ -599,7 +951,7 @@ export default function CVSection() {
           <section aria-labelledby="education-heading">
             <h3 id="education-heading">Education</h3>
             <article>
-              <h4>
+              <h4 class="firstEdu">
                 Colorado State University
                 <span className="edu-location">, Fort Collins, Colorado</span>
               </h4>
@@ -649,7 +1001,7 @@ export default function CVSection() {
           <section aria-labelledby="certs-heading">
             <h3 id="certs-heading">Technology</h3>
             <article>
-              <h4>
+              <h4 className="firstCert">
                 Trusted Tester
                 <span className="tech-location">, Online</span>
               </h4>

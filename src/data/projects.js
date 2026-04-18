@@ -101,11 +101,12 @@ const PROJECTS = [
     type: "Web App",
     title: "Build-A-CV",
     description:
-      "An interactive resume builder in React. Input your information, edit inline, and export a cleanly formatted CV — built as a practical tool and a demonstration of React state management.",
+      "A resume builder in React. Input your information, edit inline, and export a cleanly formatted CV — built as a practical tool and a demonstration of React state management.",
     stack: ["React", "JavaScript", "CSS"],
     demoUrl: "https://byocv.netlify.app/",
     githubUrl: "https://github.com/housemouse62/CV_Application",
     image: BYO_logo,
+    desktopOnly: true,
   },
 
   {
