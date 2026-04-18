@@ -92,6 +92,10 @@ h3::after {
   margin-top: 0.1rem;
 }
 
+#programs-heading::after {
+  width: 95%;
+}
+
 .headshot {
   display: block;
   margin: 0.8rem auto;

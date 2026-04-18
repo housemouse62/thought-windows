@@ -201,10 +201,10 @@ export default function CVSection() {
             <a
               href={
                 isProgramManager
-                  ? "/RSkeels CV Program.pdf"
+                  ? "/RSkeels Program Management CV.pdf"
                   : isOnboardingManager
-                    ? "/RSkeels Onboarding CV.pdf"
-                    : "/ryan-skeels-cv.pdf"
+                    ? "/RSkeels Onboarding Management CV.pdf"
+                    : "/RSkeels Chronological CV.pdf"
               }
               download
               className="cv-download"
