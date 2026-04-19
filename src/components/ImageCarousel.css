@@ -99,3 +99,19 @@
     transition: none;
   }
 }
+
+@media (max-width: 640px) {
+  .carousel {
+    aspect-ratio: 4/3;
+  }
+  .carousel-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .navdot {
+    height: 10px;
+    width: 10px;
+  }
+}

@@ -770,7 +770,49 @@ img {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ── Modal mobile ── */
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
   .modal {
-    max-height: 95vh;
+    max-height: 92vh; /* fallback for browsers without dvh */
+    max-height: 92dvh;
+    width: 100%;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  .modal-header {
+    padding: 1rem 1rem;
+  }
+  .modal-title {
+    font-size: 1.1rem;
+  }
+  .modal-close {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-body {
+    padding: 0.85rem 0.85rem;
+  }
+  .modal-projects {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+  .modal-project-button {
+    font-size: 0.75rem;
+  }
+  .project-objective {
+    padding: 0;
+    font-size: 0.875rem;
   }
 }

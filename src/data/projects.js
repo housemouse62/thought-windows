@@ -176,7 +176,7 @@ const PROJECTS = [
     type: "Design",
     title: "Andrea Moore Arts",
     description:
-      "Designed accessible visual content through Andrea Moore Arts for Special Olympics International projects, including an icon library, public health timelines, and educational materials for the developmental disabilities community and their advocates.",
+      "Assisted with the design of accessible visual content through Andrea Moore Arts for Special Olympics International projects, including an icon library, public health timelines, and educational materials for the developmental disabilities community and their advocates.",
     stack: ["Canva", "Visual Design", "Print"],
     demoUrl: null,
     githubUrl: null,
@@ -198,21 +198,21 @@ const PROJECTS = [
           id: "disability-health",
           title: "Disability Health Timeline",
           objective:
-            "Design a visual timeline of health milestones within the disability community for display at a conference, contrasting lived experience against the broader public health landscape.",
+            "Source images and assist with the design of a visual timeline of health milestones within the disability community for display at a conference, contrasting lived experience against the broader public health landscape.",
           images: [dis1, dis2, dis3, dis4, dis5],
         },
         {
           id: "public-health",
           title: "Public Health Timeline",
           objective:
-            "Design a visual timeline of public health milestones displayed alongside the community health timeline, forming a room-spanning installation illustrating the divergence between mainstream and community health histories.",
+            "Source images and assist with design a visual timeline of public health milestones displayed alongside the community health timeline, forming a room-spanning installation illustrating the divergence between mainstream and community health histories.",
           images: [public1, public2, public3, public4, public5],
         },
         {
           id: "know-rights",
           title: "Navigating Healthcare Systems",
           objective:
-            "Design educational slide decks focused on navigating healthcare systems for individuals with developmental disabilities and their advocates, including alt-text for screen reader compatibility.",
+            "Assist with the design of educational slide decks focused on navigating healthcare systems for individuals with developmental disabilities and their advocates, including alt-text for screen reader compatibility.",
           images: [rights1, rights2, rights3, rights4],
         },
       ],
