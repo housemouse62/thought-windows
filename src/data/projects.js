@@ -70,6 +70,9 @@ import BYO_logo from "../assets/images/ProjectCards/BYO_logo.png";
 //Make Poetry imports
 import make_poetry_logo from "../assets/images/ProjectCards/make_poetry_logo.png";
 
+//Storage Unit imports
+import storage_unit_logo from "../assets/images/ProjectCards/storage_unit_logo.png";
+
 const PROJECTS = [
   {
     id: "poetry-app",
@@ -108,7 +111,19 @@ const PROJECTS = [
     image: BYO_logo,
     desktopOnly: true,
   },
-
+  {
+    id: "storage-unit",
+    category: "web",
+    type: "Web App",
+    title: "Storage Unit",
+    description:
+      "A full-stack file storage app. Upload files into folders, manage them, and share any folder with a time-limited public link — no account required to view a share.",
+    stack: ["Node.js", "Express", "PostgreSQL", "Prisma", "Cloudinary", "EJS"],
+    demoUrl: "https://storage-unit-production.up.railway.app/",
+    githubUrl: "https://github.com/housemouse62/storage-unit",
+    image: storage_unit_logo,
+    desktopOnly: false,
+  },
   {
     id: "baere-brewing",
     category: "design",

@@ -58,7 +58,7 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -149,7 +149,7 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--tan);
-  line-height: 1.8;
+  line-height: 1.5;
 }
 .header-tagline strong {
   display: block;
@@ -421,7 +421,7 @@ img {
 
 .card-type {
   font-family: var(--mono);
-  font-size: 0.8srem;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ct-def);
@@ -450,7 +450,7 @@ img {
 .card-desc {
   font-size: 1.1rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.5;
   flex: 1;
   margin-bottom: 1.1rem;
 }
@@ -463,7 +463,7 @@ img {
 .card-tag {
   height: fit-content;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--ink);
   border: 1px solid var(--tag-bdr);
   padding: 0.15rem 0.5rem;
@@ -488,7 +488,7 @@ img {
   align-items: center;
 }
 .card-link {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--link);
   transition: opacity 0.15s;
@@ -574,7 +574,7 @@ img {
 .modal-narrative {
   font-size: 0.925rem;
   color: var(--muted);
-  line-height: 1.8;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
 }
 .modal-images {
@@ -592,7 +592,7 @@ img {
   padding: 0 1rem;
   font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .modal-placeholder {
